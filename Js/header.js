@@ -11,7 +11,7 @@ document.getElementById('header-content').innerHTML = `
                 <button class="cerrar-menu-hamburguesa" id="cerrar-menu-hamburguesa"><i class="bi bi-x"></i></button>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Menú</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
+                <li><a href="../Js/pages/contacto.html">Contacto</a></li>
                 <li><a href="#">Quiénes somos</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
