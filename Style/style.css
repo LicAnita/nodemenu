@@ -64,6 +64,7 @@ html{
     font-size: 2em;
     height: 60px;
     gap: 1rem;
+    margin: 0;
 }
 
 .nav-bar a{
@@ -127,7 +128,8 @@ html{
 #img-jirafa{
     object-fit: cover;
     width: 100%;
-    animation: aparecerImagen 2s linear 0s;
+    /* animation: aparecerImagen 2s linear 0s; */
+    animation: fadeIn 2s ease;
 }
 
 #container-menu{
@@ -166,7 +168,30 @@ html{
 }
 
 /* Estilos generales de los formularios */
-button,
+#contact-form,
+#menu-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 2px 5px #0F1111;
+    font-size: 1.5em;
+    padding: 2rem;
+    max-width: 500px;
+}
+
+.container-contact-form, 
+.container-menu-form{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 input,
 select,
 textarea {
@@ -180,32 +205,6 @@ textarea {
 .btn-input{
     height: 30px;
     font-size: 100%;
-}
-
-.container-form{
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-#menu-form,
-#contact-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1rem;
-    box-shadow: 0 2px 5px #0F1111;
-    font-size: 1.5em;
-    padding: 2rem;
-}
-
-label, 
-fieldset{
-    width: 100%;
 }
 
 .buttons{
@@ -229,10 +228,29 @@ fieldset{
     border-color: #6d3810;
 }
 
-/* Estilos formulario "contacto" */
+/* Estilos únicos formulario "contacto" */
+#contact-form label, 
+#contact-form fieldset{
+    width: 100%;
+}
+
+/* Estilos únicos formulario "menú" */
+#menu-form fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-form fieldset small{
+    margin-top: 0.5rem;
+    align-self: center;
+}
+
+.menu-form-cantidades{
+    display: flex;
+    gap: 2rem;
+}
 
 
-/* Estilos formulario menú */
 /* section{
     background-color: #9D5822;
     width: 100%; 
@@ -324,6 +342,17 @@ fieldset{
     to {
         transform: translateY(0);
     };
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+        filter: grayscale(60%) blur(7px) ;
+    }
 }
 
 /* Animación del título Menú */

@@ -18,16 +18,11 @@
     <!-- Fin de NavBar -->
 
     <!-- Inicio de menu -->
-    <div class="container-form">
+    <div class="container-menu-form">
       <h1>Cuáles son tus preferencias para hoy?</h1>
       <form action="" method="" id="menu-form">
+        <legend><b>Selector de Menú:</b></legend>
         <fieldset>
-          <legend><b>Selector de Menú:</b></legend><br>
-          <label for="cantidad-dias">
-            Cantidad de días: (*)
-            <input type="number" name="dias" id="dias" required>
-          </label>
-          <br>
           <label for="estacion-año">
             Seleccione la Estación del Año:
             <select name="estacion" id="estacion" required>
@@ -37,17 +32,18 @@
             </select>
           </label>
           <br>
-          <label for="comensales">
-            Cantidad de Comensales: (*)
-            <input
-              type="number"
-              name="comensales"
-              id="comensales"
-              required/>
+          <div class="menu-form-cantidades">
+            <label for="cantidad-dias">
+              Cantidad de días: (*)
+              <input type="number" name="dias" id="dias" required>
             </label>
-          </fieldset>
-          <small>(*) Campos Obligatorios</small><br>
-
+            <label for="comensales">
+              Cantidad de Comensales: (*)
+              <input type="number" name="comensales" id="comensales" required/>
+            </label>
+          </div>
+          <small>(*) Campos Obligatorios</small>
+        </fieldset>
         <div class="buttons">
           <input type="submit" value="Generar" class="btn btn-primary btn-input">
           <input type="reset" value="Borrar campos" class="btn btn-primary btn-input">
