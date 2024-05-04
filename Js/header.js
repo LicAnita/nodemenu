@@ -4,7 +4,7 @@ const footerContent = document.querySelector("#footer-content");
 
 
 document.getElementById('header-content').innerHTML = `
-    <header class="header" >
+    <header class="header">
     <button class="abrir-menu-hamburguesa" id="abrir-menu-hamburguesa"><i class="bi bi-list"></i></button>
         <nav class="nav-bar" id="nav-bar">
             <ul>
@@ -21,7 +21,7 @@ document.getElementById('header-content').innerHTML = `
 
 document.getElementById('footer-content').innerHTML = `
     <footer  class="footer">
-        <p>Creado por Anita - 2023</p>
+        <p>Creado por Anita- 2023</p>
     </footer>
 `;
 

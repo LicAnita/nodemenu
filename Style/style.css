@@ -4,7 +4,7 @@
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'ubuntu', 'Times New Roman', Times, serif;
 }
 
 :root{
@@ -25,7 +25,7 @@ html{
     "footer";
     
     grid-template-columns: 1fr;
-    grid-template-rows: 50px auto 50px;
+    grid-template-rows: 60px auto 40px;
     
     background-color: var(--color-amarillo);
     min-height: 100vh;
@@ -41,7 +41,7 @@ html{
     background-color: #FCD200;
     width: 100%; 
     position: fixed;
-    height: 50px;
+    height: 60px;
     gap: 2rem;
 }
 
@@ -62,7 +62,7 @@ html{
     align-items: center;
     list-style-type: none;
     font-size: 2em;
-    height: 50px;
+    height: 60px;
     gap: 1rem;
 }
 
@@ -84,6 +84,7 @@ html{
 .footer{
     grid-area: footer;
     font-size: 2em;
+    font-weight: 100;
     background-color: var(--color-amarillo);
     width: 100%;
     letter-spacing: 0.5em;
@@ -92,6 +93,8 @@ html{
     align-items: center;
     justify-content:center;
     padding: 0 1%;
+    height: 40px;
+
 }
 
 .footer p{
@@ -136,6 +139,7 @@ html{
 #container-menu h3{
     font-size: 3em;
     white-space: nowrap;
+    font-weight: 500;
 }
 
 #container-menu h1{
