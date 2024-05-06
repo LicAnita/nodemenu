@@ -296,6 +296,29 @@ textarea {
     text-align: center; 
 } */
 
+/* Estilos de la página de staff */
+.staff-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #FCD200;
+  }
+  
+.card {
+width: 250px;
+margin: 100px auto;
+text-align: center;
+background-color: #f2f2f2;
+border-radius: 5px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.card img {
+width: 100%;
+height: 400px;
+object-fit: cover;
+border-radius: 5px 5px 0 0;
+}
 
 /* SECTOR DE MEDIA QUERIES */
 /* Corresponde solo al botón hamburguesa */
