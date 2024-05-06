@@ -10,9 +10,10 @@ document.getElementById('header-content').innerHTML = `
             <ul>
                 <button class="cerrar-menu-hamburguesa" id="cerrar-menu-hamburguesa"><i class="bi bi-x"></i></button>
                 <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Menú</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+                <li><a href="../pages/nosotros.html">Quiénes somos</a></li>
                 <li><a href="/pages/menu.html">Menú</a></li>
-                <li><a href="/pages/contacto.html">Contacto</a></li>
-                <li><a href="#">Quiénes somos</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
         </nav>
