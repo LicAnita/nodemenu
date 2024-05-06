@@ -13,6 +13,7 @@ document.getElementById('header-content').innerHTML = `
                 <li><a href="#">Menú</a></li>
                 <li><a href="../pages/contacto.html">Contacto</a></li>
                 <li><a href="../pages/nosotros.html">Quiénes somos</a></li>
+                <li><a href="/pages/menu.html">Menú</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
         </nav>
