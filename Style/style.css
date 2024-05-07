@@ -179,6 +179,7 @@ html{
     font-size: 1.5em;
     padding: 2rem;
     max-width: 500px;
+    margin: 0 15px;
 }
 
 .container-contact-form, 
@@ -248,6 +249,10 @@ textarea {
 .menu-form-cantidades{
     display: flex;
     gap: 2rem;
+}
+
+.container-menu-form h1{
+    margin: 0 15px;
 }
 
 /* Estilos de la página de staff */
