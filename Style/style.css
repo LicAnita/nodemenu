@@ -38,17 +38,23 @@ html{
     min-width: 320px;
 }
 
-/* Estilos compartidos por el Header y Footer */
-.header{
+/* Estilos del Header */
+#header-content{
     grid-area: header;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-end;
-    background-color: var(--color-amarillo);
-    width: 100%; 
     position: fixed;
+    background-color: var(--color-amarillo);
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4%; 
     height: 60px;
-    gap: 2rem;
+    border-bottom: var(--color-negro) 1px solid;
 }
 
 .abrir-menu-hamburguesa,
@@ -58,26 +64,25 @@ html{
 
 .nav-bar{
     width: 100%; 
-    border-bottom: var(--color-negro) 1px solid;
-    padding: 0 1rem;
 }
 
 .nav-bar ul{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     list-style-type: none;
     font-size: 2em;
+    align-items: center;
     height: 60px;
     margin: 0;
 }
 
+/* .nav-bar li{
+} */
+
 .nav-bar a{
     text-decoration: none;
     color: var(--color-negro);
-    white-space: nowrap;
-    padding: 4px 10px;
-
+    padding: 5px;
 }
 
 .nav-bar a:hover{
@@ -86,27 +91,30 @@ html{
     color: var(--color-blanco);
 }
 
-.footer{
+/* Estilos del Footer */
+#footer-content{
     grid-area: footer;
+}
+
+.footer{
     font-size: 2em;
     font-weight: 100;
-    background-color: var(--color-amarillo);
+    background-color: var(--color-marron);
     width: 100%;
-    letter-spacing: 0.5em;
-    white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content:center;
-    padding: 0 1%;
     height: 40px;
     position:fixed;
     bottom: 0;
+    color: var(--color-blanco);
 }
 
 .footer p{
     float: none;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 /* Estilos pagina principal "index" */
@@ -114,7 +122,7 @@ html{
     grid-area: main;
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: center;
     align-items: center; 
     width: 100%;
     height: 85vh;
@@ -122,7 +130,6 @@ html{
 
 #container-jirafa{
     display: flex;
-    height: 100vh;
     overflow:hidden;
     align-items: center;
     justify-content: center;    
@@ -139,7 +146,7 @@ html{
 #container-menu{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     padding: 0 5rem;
     margin-top: 2rem;
@@ -148,6 +155,8 @@ html{
 #container-menu h3{
     font-size: 3em;
     font-weight: 500;
+    text-align: center;
+    
 }
 
 #container-menu h1{
@@ -247,6 +256,7 @@ textarea {
     border: none;
 }
 
+
 /* Estilos únicos formulario "menú" */
 #menu-form fieldset{
     display: flex;
@@ -266,6 +276,7 @@ textarea {
 
 .container-menu-form h1{
     margin: 0 15px;
+    text-align: center;
 }
 
 #texto-oculto{
@@ -290,6 +301,10 @@ textarea {
     margin-top: 2rem;
     background-color: var(--color-amarillo);
     gap: 2rem;
+}
+
+.container-staff-cards h1{
+    text-align: center;
 }
 
 .staff-cards {
@@ -386,10 +401,6 @@ textarea {
         color: var(--color-blanco);
     }
 
-    .abrir-menu-hamburguesa{
-        margin-right: 10px;
-    }
-
     .header{
        background-color: var(--color-marron);
     }
@@ -397,15 +408,14 @@ textarea {
     .nav-bar{
         opacity: 0;
         visibility: hidden;
-        
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 0 100vmax rgba(81, 42, 12, 1);
         gap: 1rem;
     }
     
@@ -417,12 +427,21 @@ textarea {
 
     .nav-bar ul{
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         gap: 25px;
     }
 
     .nav-bar a{
         color: var(--color-blanco);
+    }
+
+    .nav-bar a:hover{
+        background-color: var(--color-amarillo);
+    }
+
+    .footer{
+        background-color: var(--color-amarillo);
+        color: var(--color-negro);
     }
 }
 
@@ -430,6 +449,12 @@ textarea {
     .nav-bar.visible{
         visibility:hidden;
         
+    }
+}
+
+@media screen and (max-width: 620px){
+    .nav-bar ul li a i{
+        display: none;
     }
 }
 

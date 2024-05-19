@@ -14,7 +14,7 @@ let estacionElegida = "";
 let cantDias = "";
 let cantComensales = "";
 let planificacion = ['Desayuno', 'Almuerzo', 'Merienda', 'Cena'];
-const regex = /^[0-9]*$/;
+const regexNumero = /^[0-9]*$/;
 
 
 /* Obtenemos los valores ingresados en los campos HTML */
@@ -31,7 +31,7 @@ dias.addEventListener('keyup', (event) => {
     cantDias = event.target.value;
 
     /* Validamos que lo ingresado por el usuario sea un numero */
-    if(regex.test(cantDias)){
+    if(regexNumero.test(cantDias)){
         btnResetear.disabled = false;
         textoOculto.style.display = 'none';
 

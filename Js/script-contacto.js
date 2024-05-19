@@ -6,6 +6,7 @@ let comentarios = document.getElementById('comentarios');
 let btnEnviar = document.getElementById('enviar-contacto');
 let contactForm = document.getElementById('contact-form');
 let btnResetear = document.getElementById('resetear');
+let textoOculto = document.getElementById('texto-oculto');
 
 
 /* Inicializamos variables */
@@ -13,6 +14,8 @@ let nombreElegido = "";
 let apellidoElegido = "";
 let emailElegido = "";
 let comentarioElegido = "";
+const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
 
 
 /* Obtenemos los valores ingresados en los campos HTML */
@@ -37,7 +40,15 @@ apellido.addEventListener('keyup', (event) => {
 email.addEventListener('keyup', (event) => {
     emailElegido = event.target.value;
 
-    btnResetear.disabled = false;
+    /* Validamos que lo ingresado por el usuario sea un mail válido */
+    if(regexEmail.test(emailElegido)){
+        btnResetear.disabled = false;
+        textoOculto.style.display = 'none';
+
+    } else {
+        textoOculto.style.display = 'block';
+    }  
+
     
     toggleButtons();
 
