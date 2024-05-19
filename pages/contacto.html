@@ -25,36 +25,43 @@
     <!-- Inicio de contacto -->
     <div class="container-contact-form">
         <h1>Dejanos tus datos</h1>
-        <form action="" method="" id="contact-form">
-          <fieldset>
+        <form action="https://formsubmit.co/cce88b0aa69a314575730415ff95e9f4" method="POST" id="contact-form">
+          <fieldset class="contact-form-fieldset">
             <legend><b>Formulario de contacto:</b></legend>
             <br>
             <label for="nombre"> Nombres: (*) 
-              <input type="text" name= "nombre" id="nombre" required>
+              <input type="text" name= "nombre" id="nombre" placeholder="Escriba su nombre..." required>
             </label>
+            <br>
             <br>
             <label for="apellido"> Apellido: (*) 
-              <input type="text" name="apellido" id="apellido" required>
+              <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido..." required>
             </label>
             <br>
+            <br>
             <label for="correo"> Correo: (*)
-              <input type="email" name="correo" id="correo" required>
+              <input type="email" name="email" id="email" placeholder="Escriba su correo..." required>
             </label>
             <br>
             <small>(*) Campos Obligatorios </small>
+            <small id="texto-oculto">El correo ingresado no es válido</small>
           </fieldset>
           <br>
           <fieldset>
-            <legend><b>Comentarios:</b><small>(Opcional)</small></legend> 
+            <legend><b>Comentarios: </b><small>(Opcional)</small></legend> 
             <label for="comentarios">
               <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Escriba su consuslta o comentario..."></textarea>
              </label>
           </fieldset>
           <br>
           <div class="buttons">
-            <input type="submit" value="Enviar comentario" class="btn btn-primary btn-input">
-            <input type="reset" value="Borrar campos" class="btn btn-primary btn-input">
+            <input type="submit" value="Enviar comentario" class="btn btn-primary btn-input" disabled id="enviar-contacto">
+            <input type="reset" value="Borrar campos" class="btn btn-primary btn-input" disabled id="resetear">
           </div>
+
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/contacto.html">
+          <input type="hidden" name="_captcha" value="false">
+
         </form>
     </div>  
     <!-- Fin de contacto -->
@@ -65,7 +72,7 @@
     <!-- Fin del pie -->
     
     <!-- Inicio de JS -->
-    <script src="../Js/script.js"></script>
+    <script src="../Js/script-contacto.js"></script>
     <script src="../Js/header.js"></script>
     <script src="../Js/menu-hamburguesa.js"></script>
     <!-- Fin de JS -->
