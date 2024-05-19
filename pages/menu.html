@@ -17,6 +17,7 @@
     
     <title>Menú</title>
   </head>
+
   <body class="container-body">
     <!-- Inicio de NavBar -->
     <header id="header-content"></header>
@@ -28,44 +29,51 @@
       <form action="" method="" id="menu-form">
         <legend><b>Selector de Menú:</b></legend>
         <fieldset>
-          <label for="estacion-año">
-            Seleccione la Estación del Año:
+          <label for="estacion-anio">
+            Seleccione la Estación del Año: (*)
             <select name="estacion" id="estacion" required>
-              <option value="verano">Primavera o Verano</option>
-              <option value="invierno">Otoño o Invierno</option>
-              <option value="todos">Todos</option>
+              <option value="" disabled selected>Seleccione una estación del año...</option>
+              <option value="1">Primavera o Verano</option>
+              <option value="2">Otoño o Invierno</option>
+              <option value="3">Todos</option>
             </select>
           </label>
           <br>
           <div class="menu-form-cantidades">
             <label for="cantidad-dias">
               Cantidad de días: (*)
-              <input type="number" name="dias" id="dias" required>
+              <input type="text" name="dias" id="dias" required>
             </label>
             <label for="comensales">
               Cantidad de Comensales: (*)
-              <input type="number" name="comensales" id="comensales" required/>
+              <input type="text" name="comensales" id="comensales" required>
             </label>
           </div>
           <small>(*) Campos Obligatorios</small>
+          <small id="texto-oculto">Debe ingresar un número</small>
         </fieldset>
         <div class="buttons">
-          <input type="submit" value="Generar" class="btn btn-primary btn-input">
-          <input type="reset" value="Borrar campos" class="btn btn-primary btn-input">
+          <input type="button" value="Generar" class="btn btn-primary btn-input" id="generar" disabled>
+          <input type="button" value="Borrar campos" class="btn btn-primary btn-input" id="resetear" disabled>
         </div>
       </form>
+      <!-- Inicio de la zona de devolucion de JS -->
+      <section class="devolucion">
+        <div id="devuelve-menu"></div>
+        <div id="devuelve-compras"></div>
+      </section>
+      <!-- Fin de la zona de devolución de JS -->
     </div>
-    
-    <!-- Fin de contacto -->
 
     <!-- Inicio del pie -->
     <footer id="footer-content"></footer>
     <!-- Fin del pie -->
-
+    
     <!-- Inicio de JS -->
-    <script src="../Js/script.js"></script>
+    <script src="../Js/script-menu.js"></script>
     <script src="../Js/header.js"></script>
     <script src="../Js/menu-hamburguesa.js"></script>
     <!-- Fin de JS -->
   </body>
+  
 </html>
