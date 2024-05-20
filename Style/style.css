@@ -76,9 +76,6 @@ html{
     margin: 0;
 }
 
-/* .nav-bar li{
-} */
-
 .nav-bar a{
     text-decoration: none;
     color: var(--color-negro);
@@ -115,6 +112,7 @@ html{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    font-weight: 300;
 }
 
 /* Estilos pagina principal "index" */
@@ -139,7 +137,7 @@ html{
 #img-jirafa{
     object-fit: cover;
     width: 100%;
-    animation: aparecerImagen 2s linear 0s;
+   /*  animation: aparecerImagen 2s linear 0s; */
     animation: fadeIn 2s ease;
 }
 
@@ -203,6 +201,7 @@ html{
     padding: 2rem;
     max-width: 500px;
     margin: 0 15px;
+    border-radius: 8px;
 }
 
 input,
@@ -211,8 +210,9 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   width: 100%;
-  padding: 0;
+  padding: 8px;
   margin: 0;
+  border-radius: 8px;
 }
 
 .btn-input{
@@ -256,6 +256,11 @@ textarea {
     border: none;
 }
 
+#contact-form fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Estilos únicos formulario "menú" */
 #menu-form fieldset{
@@ -284,12 +289,19 @@ textarea {
     color: var(--color-rojo-oculto);
 }
 
-#devuelve-menu {
+.devolucion{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items:flex-start;
-    font-size: 1.5em;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+#devuelve-menu {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items:flex-start;
+     padding: 0 2em;
 }
 
 /* Estilos de la página de staff */
@@ -361,54 +373,27 @@ textarea {
     cursor: pointer;
     color: var(--color-social-hover);
 }
-/* section{
-    background-color: #9D5822;
-    width: 100%; 
-    height: 100vh;
-    padding: 0 3rem;
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-/* form{
-   align-items: center;
-   background-color: #FCD200;
-   box-shadow: 0 2px 5px #0F1111;
-} */
 
 /* .devolucion{
     display: none;
     text-align: center; 
 } */
 
-/* Estilos de la página de staff */
-.staff-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #FCD200;
-}
-  
-.card {
-width: 250px;
-margin: 100px auto;
-text-align: center;
-background-color: #f2f2f2;
-border-radius: 5px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-  
-.card img {
-width: 100%;
-height: 400px;
-object-fit: cover;
-border-radius: 5px 5px 0 0;
-}
-
 /* SECTOR DE MEDIA QUERIES */
-@media screen and (max-width: 320px){
+/* ----------------------- */
+
+/* --- INICIO Zona de BREAK POINTS --- */
+@media screen and (max-width: 320px) {
+    #contact-form{
+       max-width: 280px;
+       gap: 0;
+    }
+
+    #contact-form .buttons,
+    #menu-form .buttons{
+        display: flex;
+        flex-direction: column;
+    }
 
 }
 
@@ -468,10 +453,35 @@ border-radius: 5px 5px 0 0;
     }
 }
 
+@media screen and (max-width: 768px){
+    .card {
+        margin: 0 2rem;
+    }
+
+    .nav-bar ul{
+        font-size: 1.8em;
+
+    }
+}
+
+@media screen and (max-width: 1200px){
+    /* Ver si la utilizamos */
+}
+/* --- FIN Zona de BREAK POINTS --- */
+
+
+/* Cambios pequeños al reducir pantalla */
 @media screen and (min-width: 551px) {
     .nav-bar.visible{
-        visibility:hidden;
-        
+        visibility:hidden; 
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .menu-form-cantidades{
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -480,17 +490,7 @@ border-radius: 5px 5px 0 0;
         display: none;
     }
 }
-
-@media screen and (max-width: 768px){
-    .card {
-        margin: 0 2rem;
-    }
-}
-
-
-@media screen and (max-width: 1200px){
-
-}
+   
 
 /* Animación de imagen principal */
 @keyframes aparecerImagen {
