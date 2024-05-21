@@ -46,7 +46,7 @@ document.getElementById('header-content').innerHTML = `
 
 document.getElementById('footer-content').innerHTML = `
     <div class="footer">
-        <p>Creado por Anita - 2023</p>
+        <p>Creado por Ana, César, Felipe y Jonathan - 2024</p>
     </div>
 `;
 
