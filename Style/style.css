@@ -369,6 +369,12 @@ textarea {
     font-size: 1.5em;
 }
 
+.social a,
+.social a:active,
+.social a:visited{
+    color: white;
+}
+
 .social i:hover {
     cursor: pointer;
     color: var(--color-social-hover);
