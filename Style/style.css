@@ -35,6 +35,7 @@ html{
     
     background-color: var(--color-amarillo);
     min-height: 100vh;
+    width: 100%;
 }
 
 /* Estilos del Header */

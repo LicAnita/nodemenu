@@ -46,7 +46,7 @@ comensales.addEventListener('keyup', (event) => {
     cantComensales = event.target.value;
     
     /* Validamos que lo ingresado por el usuario sea un numero */
-    if(regex.test(cantComensales)){
+    if(regexNumero.test(cantComensales)){
         btnResetear.disabled = false;
         textoOculto.style.display = 'none';
 
@@ -103,7 +103,7 @@ btnGenerar.addEventListener("click", () => {
     /* INVIERNO */
     if(estacionElegida === "2"){
         /* Filtramos los menú de invierno */
-        menuInvierno = allMenu.filter(menu => menu.estacion !== 'verano');
+        const menuInvierno = allMenu.filter(menu => menu.estacion !== 'verano');
         
         /* Filtramos por tipo de comida */
         const desayuno = menuInvierno.filter(menu => menu.tipo == 'snack');
@@ -114,7 +114,7 @@ btnGenerar.addEventListener("click", () => {
         /* Dibujamos en el HTML las comidas por día */
         for(let i = 1; i <= cantDias; i++){
             document.getElementById('devuelve-menu').innerHTML += `
-            <ul><u><b>DÍA: ${i}</b></u></ul>
+            <ul><u>DÍA: ${i}</u></ul>
             <li><strong>Desayuno:</strong> ${desayuno[Math.floor(Math.random() * desayuno.length)].nombre}</li>
             <li><strong>Almuerzo:</strong> ${almuerzo[Math.floor(Math.random() * almuerzo.length)].nombre}</li>
             <li><strong>Merienda:</strong> ${merienda[Math.floor(Math.random() * merienda.length)].nombre}</li>
@@ -127,7 +127,7 @@ btnGenerar.addEventListener("click", () => {
     /* TODOS */
     if(estacionElegida === "3"){
         /* Filtramos los menú de invierno */
-        menuTodos = allMenu.filter(menu => menu.estacion === 'todos');
+        const menuTodos = allMenu.filter(menu => menu.estacion === 'todas');
         
         /* Filtramos por tipo de comida */
         const desayuno = menuTodos.filter(menu => menu.tipo == 'snack');
@@ -138,7 +138,7 @@ btnGenerar.addEventListener("click", () => {
         /* Dibujamos en el HTML las comidas por día */
         for(let i = 1; i <= cantDias; i++){
             document.getElementById('devuelve-menu').innerHTML += `
-            <ul><u><b>DÍA: ${i}</b></u></ul>
+            <ul><u>DÍA: ${i}</u></ul>
             <li><strong>Desayuno:</strong> ${desayuno[Math.floor(Math.random() * desayuno.length)].nombre}</li>
             <li><strong>Almuerzo:</strong> ${almuerzo[Math.floor(Math.random() * almuerzo.length)].nombre}</li>
             <li><strong>Merienda:</strong> ${merienda[Math.floor(Math.random() * merienda.length)].nombre}</li>
