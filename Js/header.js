@@ -34,7 +34,7 @@ document.getElementById('header-content').innerHTML = `
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/pages/ayuda.html">
                         <i class="bi bi-info-circle"></i>
                         <span>Ayuda</span>
                     </a>
