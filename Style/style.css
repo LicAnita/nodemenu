@@ -436,7 +436,8 @@ textarea {
     text-decoration: none;
 }
 
-.faq-answer a:visited{
+.faq-answer a:visited,
+.faq-answer a:active{
     color: #666;
 }
 
