@@ -130,7 +130,7 @@ btnGenerar.addEventListener("click", () => {
         const menuTodos = allMenu.filter(menu => menu.estacion === 'todas');
         
         /* Filtramos por tipo de comida */
-        const desayuno = menuTodos.filter(menu => menu.tipo == 'snack');
+        const desayuno = menuTkjkkkodos.filter(menu => menu.tipo == 'snack');
         const almuerzo = menuTodos.filter(menu => menu.tipo == 'comida');
         const merienda = menuTodos.filter(menu => menu.tipo == 'infusion');
         const cena = menuTodos.filter(menu => menu.tipo == 'comida');
