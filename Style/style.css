@@ -213,6 +213,8 @@ textarea {
   padding: 8px;
   margin: 0;
   border-radius: 8px;
+  border: none;
+  outline: none;
 }
 
 .btn-input{
@@ -239,6 +241,8 @@ textarea {
 .buttons input:hover{
     background-color: var(--color-marron-hover);
     border-color: var(--color-marron-hover);
+    cursor: pointer;
+    box-shadow:0 0 5px #333;
 }
 
 #generar:disabled,
@@ -652,6 +656,11 @@ textarea {
 @media screen and (max-width: 620px){
     .nav-bar ul li a i{
         display: none;
+    }
+
+    .footer{
+        font-size: 14px;
+        background-color: #512a0c;
     }
 }
    
