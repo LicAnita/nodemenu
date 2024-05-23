@@ -599,7 +599,7 @@ textarea {
 
     .footer{
         background-color: var(--color-amarillo);
-        color: var(--color-negro);
+        /* color: var(--color-negro);*/
     }
 }
 
