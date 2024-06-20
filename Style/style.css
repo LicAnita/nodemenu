@@ -141,6 +141,11 @@ html{
     animation: fadeIn 2s ease;
 }
 
+#img-error{
+    max-width: 500px;
+    max-height: 500px;
+}
+
 #container-menu{
     display: flex;
     flex-direction: column;
